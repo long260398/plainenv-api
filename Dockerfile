@@ -1,7 +1,7 @@
 FROM php:8.3-cli-alpine
 
-RUN apk add --no-cache git unzip libzip-dev libpng-dev oniguruma-dev && \
-    docker-php-ext-install pdo pdo_sqlite zip bcmath mbstring
+RUN apk add --no-cache git unzip sqlite-dev libzip-dev && \
+    docker-php-ext-install pdo pdo_sqlite zip bcmath
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
