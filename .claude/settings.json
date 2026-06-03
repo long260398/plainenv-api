@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php artisan *)",
+      "Bash(composer *)",
+      "Bash(php -r *)",
+      "Bash(mysql *)",
+      "Bash(git *)",
+      "Bash(cp .env.example .env)"
+    ]
+  }
+}
