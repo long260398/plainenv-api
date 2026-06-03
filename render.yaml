@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: plainenv-api
+    runtime: docker
+    plan: free
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        sync: false
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: /app/database/database.sqlite
+      - key: CORS_ALLOWED_ORIGINS
+        value: "*"
